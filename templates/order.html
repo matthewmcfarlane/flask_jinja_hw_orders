@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>
+        {{ title }} - Order information
+    </title>
+</head>
+
+<body>
+    <h1>Order {{ order[order_id] }}
+
+        <table class="orders">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Quantity</th>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Card Type</th>
+            <th>Store Location</th>
+            <th>Loyalty Member?</th>
+            <th>Age</th>
+
+            <tr>
+                <td>{{ order.order_id }}</td>
+                <td>{{ order.cust_name }}</td>
+                <td>{{ order.date }}</td>
+                <td>{{ order.quantity }}</td>
+                <td>{{ order.item }}</td>
+                <td>{{ order.description }}</td>
+                <td>{{ order.card }}</td>
+                <td>{{ order.store_location }}</td>
+                <td>{{ order.member }}</td>
+                <td>{{ order.age }}</td>
+            </tr>
+        </table>
+</body>
+
+</html>
